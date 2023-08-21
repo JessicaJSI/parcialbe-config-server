@@ -3,11 +3,6 @@ server:
 spring:
   application:
     name: catalog-service
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3370/movie-dev
-    username: usr-movie
-    password: pwd-movie
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
