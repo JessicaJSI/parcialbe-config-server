@@ -25,4 +25,6 @@ spring:
                 - id: movieRoute
                   uri: lb://movie-service/
                   predicates:
-                      - Path=/movies/**
+                      - Path=/api/v1/movies/**
+                  filters:
+                      - StripPrefix=2
