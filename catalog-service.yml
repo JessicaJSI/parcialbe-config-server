@@ -3,10 +3,6 @@ server:
 spring:
   application:
     name: catalog-service
-  jpa:
-    hibernate.ddl-auto: update
-    generate-ddl: true
-    show-sql: true
 eureka:
   client:
     register-with-eureka: true
