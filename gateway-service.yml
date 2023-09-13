@@ -14,8 +14,8 @@ spring:
                   uri: lb://catalog-service/
                   predicates:
                       - Path=/catalog/**
-            default-filters:
-                - name: FilterCustom
+            #default-filters:
+                #- name: FilterCustom
 
 eureka:
     client:
