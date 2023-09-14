@@ -40,6 +40,7 @@ management:
           registerHealthIndicator: true
           allowHealthIndicatorToFail: false
           automaticTransitionFromOpenToHalfOpenEnabled: true
+          
     retry:
       instances:
         movies:
