@@ -24,3 +24,16 @@ management:
   endpoint:
     health:
       show-details: always
+
+  resilience4j:
+    circuitbreaker:
+      instances:
+        movies:  #Este nombre debe coincidir con el que se encuentra en el programa en "name"
+          slidingWindowType: COUNT_BASED
+          slidingWindowSize: 5
+          failureRateThreshold: 50
+          waitDurationInOpenState: 15000
+          permittedNumberOfCallsInHalfOpenState: 3
+          registerHealthIndicator: true
+          allowHealthIndicatorToFail: false
+          automaticTransitionFromOpenToHalfOpenEnabled: true
