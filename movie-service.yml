@@ -3,9 +3,9 @@ server:
 spring:
   application:
     name: movie-service
-  zipkin:
-    base-url: http://192.168.99.100:9411
-    enabled: true
+  #zipkin:
+    #base-url: http://192.168.99.100:9411
+    #enabled: true
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.99.100:3306/movie-dev
@@ -29,6 +29,8 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
 management:
+  tracing:
+    endpoint: http://192.168.99.100:9411/
   endpoints:
     web:
       exposure:
