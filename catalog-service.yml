@@ -29,7 +29,7 @@ management:
     circuitbreaker:
       instances:
         movies:  #Este nombre debe coincidir con el que se encuentra en el programa en "name"
-          slidingWindowType: COUNT_BASED
+          slidingWindowType: COUNT_BASED  #Hay dos tipos por ventanas de tiempo o de eventos
           slidingWindowSize: 5
           failureRateThreshold: 50
           waitDurationInOpenState: 15000
