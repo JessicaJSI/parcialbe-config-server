@@ -11,3 +11,8 @@ eureka:
         prefer-ip-address: true
     server:
         wait-time-in-ms-when-sync-empty: 0
+
+spring:
+  zipkin:
+    base-url: http://192.168.99.100:9411/zipkin/
+    enabled: true
