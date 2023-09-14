@@ -40,3 +40,10 @@ management:
           registerHealthIndicator: true
           allowHealthIndicatorToFail: false
           automaticTransitionFromOpenToHalfOpenEnabled: true
+    retry:
+      instances:
+        movies:
+          waitDuration: 1000
+          maxAttempts: 3
+          retryExceptions:
+            - feign.FeignException$InternalServerError
