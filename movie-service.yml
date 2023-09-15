@@ -22,7 +22,7 @@ spring:
     port: 5672
 
 queue:
-  persona:
+  movie:
     name: TestQueue
 
 message:  se ha agregue una nueva pelicula
