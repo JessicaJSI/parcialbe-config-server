@@ -21,7 +21,7 @@ spring:
     port: 5672
 
 queue:
-  persona:
+  serie:
     name: TestQueue
 
 message:  se ha agregue una nueva serie
