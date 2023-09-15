@@ -7,6 +7,15 @@ spring:
   zipkin:
     base-url: http://192.168.99.100:9411/
     enabled: true
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+
+queue:
+  persona:
+    name: TestQueue
     
 eureka:
   client:
