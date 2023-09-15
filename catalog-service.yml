@@ -4,9 +4,13 @@ server:
 spring:
   application:
     name: catalog-service
-  zipkin:
-    base-url: http://192.168.99.100:9411/
-    enabled: true
+  #zipkin:
+    #base-url: http://192.168.99.100:9411/
+    #enabled: true
+  data:
+    mongodb:
+      database: catalog-db
+      port: 27017
   rabbitmq:
     username: guest
     password: guest
@@ -14,8 +18,10 @@ spring:
     port: 5672
 
 queue:
-  persona:
-    name: TestQueue
+  movie:
+    name: MovieQueue
+  serie:
+    name: SerieQueue
     
 eureka:
   client:
@@ -31,6 +37,12 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
 management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: http://localhost:9411/api/v2/spans
   endpoints:
     web:
       exposure:
@@ -62,3 +74,4 @@ management:
           maxAttempts: 3
           retryExceptions:
             - feign.FeignException$InternalServerError
+            - feign.FeignException$ServiceUnavailable
